@@ -1,0 +1,124 @@
+.slider {
+    width: 100%;
+    &__item {
+        position: relative;
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 17.68%, #000000 100%);
+    }
+
+    &__img {
+        width: 100%;
+
+        &_shadow {
+            max-height: 300px;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        bottom: 81px;
+        left: 51px;
+    }
+
+    &__header {
+        color: #fff;
+        font-size: 24px;
+    }
+
+    &__subheader {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    &__subtext {
+        display: block;
+        font-weight: bold;
+        line-height: 17px;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #000;
+        transition: all 0.2s linear;
+        &:hover {
+            color: $yellow;
+            text-decoration: none;
+        }
+        &::after {
+            content: url(/img/ico-arrow-right-black.svg);
+        }
+    }
+}
+
+.slick {
+    &-dots {
+        bottom: 25px;
+
+        li {
+            width: 75px;
+            height: 4px;
+            margin: 0;
+
+            button {
+                width: 75px;
+                height: 4px;
+                transition: all 0.2s linear;
+
+                &::before {
+                    content: "";
+                    width: 75px;
+                    height: 4px;
+                    background-color: #828282;
+                }
+            }
+        }
+    }
+}
+
+.slick-dots li.slick-active button:before {
+    background-color: $yellow;
+    opacity: 1;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.slick-dots li.slick-active button:hover:before,
+.slick-dots li.slick-active button:focus:before {
+    background-color: $yellow;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+// 
+.slider-nav {
+
+    .slick-next,
+    .slick-prev {
+        height: 15px;
+        width: 15px;
+        z-index: 2;
+    }
+
+    .slick-next {
+        right: 0;
+
+        &::before {
+            content: url(/img/slider-nav-next.svg);
+        }
+    }
+
+    .slick-prev {
+        left: 0;
+
+        &::before {
+            content: url(/img/slider-nav-prev.svg);
+        }
+    }
+}
+.slider-nav .slider__item {
+    margin: 0 2px;
+}

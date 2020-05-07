@@ -1,0 +1,6 @@
+.sidebar {
+    width: 31%;
+    @include media (d-small) {
+        width: 100%;
+    }
+}

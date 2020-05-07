@@ -1,0 +1,40 @@
+.subscription {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    &__item {
+        background-image: url(/img/social-sprite.png);
+        background-repeat: no-repeat;
+        height: 37px;
+        display: block;
+
+        &_fb-like {
+            width: 65px;
+        }
+
+        &_fb-share {
+            width: 60px;
+            background-position: -65px 0;
+        }
+
+        &_twitter {
+            width: 85px;
+            background-position: -127px 1px;
+        }
+
+        &_pinterest {
+            width: 103px;
+            background-position: -211px 1px;
+        }
+
+        &_google-plus {
+            width: 47px;
+            background-position: -319px 2px;
+        }
+
+        &_google-plus-2 {
+            width: 71px;
+            background-position: -368px 2px;
+        }
+    }
+}

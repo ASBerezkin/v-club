@@ -1,0 +1,81 @@
+.schedule {
+    background-image: linear-gradient(180deg, #1C1C1C 0%, #383737 50.83%, #2A2B2B 99.98%, rgba(40, 41, 41, 0.447514) 99.99%, #282828 100%);
+    padding-bottom: 26px;
+    min-height: 563px;
+    @include media (d-medium) {
+        min-height: $def-size*53;
+    }
+}
+
+.nav {
+    justify-content: center;
+    border-bottom: none;
+    padding-top: 16px;
+
+    &-tabs &-item {
+        background-color: #2D2E2E;
+        width: 100%;
+        max-width: $def-size*14.9;
+        text-align: center;
+        @include media (d-medium) {
+            max-width: 45%;
+        }
+
+        &.active {
+            background-color: $yellow;
+            color: #2D2E2E;
+        }
+    }
+
+    &-tabs &-link {
+        border: none;
+        border-radius: 0;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: $yellow;
+        transition: all 0.2s linear;
+        @include media (d-medium) {
+            font-size: $def-size+2;
+        }
+
+        &:hover {
+            background-color: $yellow;
+            color: #2D2E2E;
+        }
+
+        &.active {
+            background-color: $yellow;
+            color: #2D2E2E;
+        }
+    }
+
+    &__hr {
+        border-bottom: 1px solid #2E2E2E;
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 106px;
+    }
+
+    &__text {
+        font-family: $ff2;
+        color: $yellow;
+        font-size: 16px;
+        line-height: 23px;
+
+        @include media (d-medium) {
+            font-size: $def-size*1.4;
+            line-height: $def-size*1.8;
+        }
+
+        &_white {
+            color: #fff;
+        }
+
+        &_small {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+}

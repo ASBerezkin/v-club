@@ -1,0 +1,24 @@
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px solid #969696;
+    padding-top: 37px;
+    padding-bottom: 37px;
+    margin-top: 43px;
+    @include media (d-small) {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+    &__logo {
+        @include media (d-small) {
+            width: 100%;
+        }
+    }
+}
+.copyright {
+    font-family: $ff2;
+    font-size: 16px;
+    color: #969696;
+}

@@ -1,0 +1,31 @@
+@mixin media($point) {
+
+    $extra-small-device: "(max-width: 575.97px)";
+    $small-device: "(max-width: 767.97px)";
+    $medium-device: "(max-width: 991.97px)";
+    $large-device: "(max-width: 1199.97px)";
+
+    @if $point==e-small {
+        @media only screen and #{$extra-small-device} {
+            @content;
+        }
+    }
+
+    @else if $point==d-small {
+        @media only screen and #{$small-device} {
+            @content;
+        }
+    }
+
+    @else if $point==d-medium {
+        @media only screen and #{$medium-device} {
+            @content;
+        }
+    }
+
+    @else if $point==d-large {
+        @media only screen and #{$large-device} {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.header {
+    width: 100%;
+    @include media (d-medium) {
+        padding: 0 15px;
+    }
+    &-zone {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}

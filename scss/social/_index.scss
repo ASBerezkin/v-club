@@ -1,0 +1,36 @@
+.social {
+    display: flex;
+    justify-content: center;
+    &-link {
+        width: 28px;
+        height: 28px;
+        background-color: #A3A5AD;
+        margin: 0 1px;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all 0.3s linear;
+        @include media (d-medium) {
+            width: 17px;
+            height: 17px;
+        }
+        @include media (d-small) {
+            width: 26px;
+            height: 26px;
+        }
+        &:hover {
+            background-color: $yellow;
+        }
+        &__tw {
+            background-image: url(/img/icon-twitter.svg);
+        }
+        &__fb {
+            background-image: url(/img/icon-facebook.svg);
+        }
+        &__you {
+            background-image: url(/img/icon-youtube.svg);
+        }
+        &__vk {
+            background-image: url(/img/icon-vk.svg);
+        }
+    }
+}

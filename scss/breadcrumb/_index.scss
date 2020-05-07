@@ -1,0 +1,35 @@
+.breadcrumb {
+    margin-left: 200px;
+    background-color: transparent;
+    @include media (d-medium) {
+        margin-left: 175px;
+    }
+    @include media (d-small) {
+        margin-left: 20px;
+    }
+    &-item {
+        position: relative;
+        font-size: 12px;
+        text-transform: uppercase;
+        @include media (d-small) {
+            font-size: 14px;
+        }
+        @include media (e-small) {
+            font-size: 16px;
+        }
+    }
+    &-link {
+        color: #000;
+        transition: all 0.2s linear;
+        &:hover {
+            text-decoration: none;
+            color: $yellow;
+        }
+    }
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    content: url(/img/ico-breadcrumb.png);
+    position: absolute;
+    left: 0.2rem;
+    top: -0.2rem;
+}

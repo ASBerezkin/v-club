@@ -1,0 +1,80 @@
+.schedule {
+    background: linear-gradient(180deg, #1C1C1C 0%, #383737 50.83%, #2A2B2B 99.98%, rgba(40, 41, 41, 0.447514) 99.99%, #282828 100%);
+    min-height: 492px;
+    padding-top: 15px;
+    &-tabs {
+        border-bottom: none;
+    }
+
+    &-item {
+        text-align: center;
+        padding: 10px 0;
+        width: 45%;
+
+        &:hover .schedule-link {
+            text-decoration: none;
+        }
+    }
+
+    &-link {
+        font-family: $ff;
+        font-size: 16px;
+        background-color: #2D2E2E;
+        color: #fff;
+        padding: 10px 29px;
+        text-transform: uppercase;
+        display: block;
+
+        &.active {
+            background-color: $yellow;
+            color: #2D2E2E;
+        }
+    }
+
+    &-content {
+        & .row {
+            border-top: 1px solid #2E2E2E;
+        }
+
+        & .row:first-child {
+            border-top: none;
+        }
+
+        &__item {}
+
+        &__logo {
+            text-align: center;
+
+            img {
+                width: 100%;
+                max-width: 85px;
+            }
+        }
+
+        &__club {
+            font-family: $ff2;
+            font-size: 16px;
+            line-height: 23px;
+            font-weight: bold;
+            color: $yellow;
+        }
+
+        &__text {
+            font-family: $ff2;
+            font-size: 18px;
+            line-height: 26px;
+            color: #fff;
+            &_yellow {
+                color: $yellow;
+            }
+            &_small {
+                font-size: 16px;
+                line-height: 23px;
+            }
+            &_supersmall {
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+    }
+}

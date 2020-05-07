@@ -1,0 +1,58 @@
+.pagination {
+    justify-content: center;
+    border-radius: 0;
+}
+
+.page {
+    &-item {
+        width: 75px;
+        border-bottom: 2px solid #646464;
+        text-align: center;
+        transition: all 0.2s linear;
+
+        &:first-child {
+            border-bottom: none;
+            .page-link {
+                border-radius: 0;
+            }
+        }
+
+        &:last-child {
+            border-bottom: none;
+            .page-link {
+                border-radius: 0;
+            }
+        }
+
+        &.active {
+            border-bottom: 2px solid $yellow;
+
+            .page-link {
+                color: $yellow;
+                background-color: transparent;
+            }
+        }
+
+        &:hover {
+            border-bottom-color: $yellow;
+        }
+    }
+
+    &-link {
+        font-family: $ff;
+        font-weight: bold;
+        line-height: 25px;
+        font-size: 20px;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        transition: all 0.2s linear;
+        &_color-969696 {
+            color: #969696
+        }
+        &:hover {
+            background-color: transparent;
+            color: $yellow;
+        }
+    }
+}

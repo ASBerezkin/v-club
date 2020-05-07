@@ -1,0 +1,72 @@
+.main-schedule {
+    &__header {
+        font-family: $ff2;
+        font-weight: bold;
+        font-size: 17px;
+        color: #969696;
+        border-right: 1px solid #dee2e6;
+        &:last-child {
+            border-right: none;
+        }
+        @include media (d-small) {
+            font-size: 14px;
+            font-weight: normal;
+            vertical-align: middle;
+        }
+    }
+
+    &__name-round {
+        background-color: $yellow;
+        font-family: $ff2;
+        font-weight: bold;
+        font-size: 18px;
+        color: #313131;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: $ff2;
+        font-size: 16px;
+        color: #000000;
+        border-right: 1px solid #dee2e6;
+
+        &:last-child {
+            border-right: none;
+        }
+
+        @include media (d-small) {
+            font-size: 14px;
+            vertical-align: middle;
+        }
+    }
+
+    &__score {
+        &:first-child::after {
+            content: "";
+            display: block;
+            width: 31px;
+            height: 1px;
+            background-color: $yellow;
+            margin: 5px auto;
+        }
+
+        &_bold {
+            font-weight: bold;
+        }
+
+        &_gray {
+            color: #8f8585;
+        }
+    }
+
+    &__wrap {
+        @include media (e-small) {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+        }
+    }
+}

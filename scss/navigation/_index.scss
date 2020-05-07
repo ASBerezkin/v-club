@@ -1,0 +1,131 @@
+.navigation {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    height: 50px;
+    background-color: #282929;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    padding-left: 178px;
+    position: relative;
+    margin-top: $def-size;
+
+    @include media (d-small) {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 0;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 0;
+        padding-top: 40px;
+        position: absolute;
+        top: -15px;
+        right: 0;
+        margin-left: 100%; // добавить анимацию
+        overflow-x: hidden;
+        transition: width 0.3s linear;
+        z-index: 1;
+    }
+
+    &_show {
+        width: 100%;
+    }
+
+    &__item {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-left: 2px solid #000;
+
+        @include media (maxw767) {
+            justify-content: flex-start;
+            padding-left: 30px;
+            border-left: 0;
+            border-bottom: 2px solid #000;
+        }
+    }
+
+    &__link {
+        color: #fff;
+        padding: 0;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all 0.2s linear;
+
+        &:hover {
+            color: $yellow;
+            text-decoration: none;
+        }
+
+        &.active {
+            color: $yellow;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        left: 1rem;
+        width: 100%;
+        max-width: 150px;
+        z-index: 2;
+        @include media (d-medium) {
+            max-width: $def-size*13.4;
+        }
+
+        @include media (d-small) {
+            display: none;
+        }
+    }
+}
+
+// mobile-ico
+.mobile-ico {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
+    &__item {
+        display: none;
+        width: 35px;
+        height: 5px;
+        background-color: $yellow;
+        margin: 6px 0;
+        transition: 0.4s;
+
+        @include media (d-small) {
+            display: block;
+            background-color: $yellow;
+        }
+    }
+
+    &.change {
+        z-index: 2;
+    }
+}
+
+/* Rotate first bar */
+.change .mobile-ico__item-1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* Fade out the second bar */
+.change .mobile-ico__item-2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .mobile-ico__item-3 {
+    -webkit-transform: rotate(45deg) translate(-9px, -7px);
+    transform: rotate(45deg) translate(-9px, -7px);
+}
+
+// Анимация мобильного меню

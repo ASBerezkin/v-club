@@ -1,0 +1,11 @@
+.promo {
+    display: block;
+    margin-top: 15px;
+    @include media (d-small) {
+        text-align: center;
+    }
+    img {
+        width: 100%;
+        max-width: 362px;
+    }
+}
